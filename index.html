@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Product Page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <h1>🛍️ ShopEase</h1>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#products">Products</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+        <div class="cart">
+
+            🛒 Cart :
+            <span id="cart-count">0</span>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h2>
+                Latest Fashion Products
+            </h2>
+
+            <p>
+                Buy trendy and stylish products
+                with amazing offers.
+            </p>
+
+            <button onclick="goToProducts()">
+                Shop Now
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
+                alt="Shopping">
+
+        </div>
+
+    </section>
+
+    <!-- Products -->
+
+    <section class="products" id="products">
+
+        <!-- Product 1 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+                alt="Nike Shoes">
+
+            <h3>Nike Shoes</h3>
+
+            <p>$120</p>
+
+            <span class="offer">
+                20% OFF
+            </span>
+
+            <p class="product-text">
+                Stylish and comfortable sports shoes.
+            </p>
+
+            <button
+                onclick="addToCart(
+                    'Nike Shoes',
+                    '$120'
+                )">
+
+                Add To Cart
+
+            </button>
+
+            <button
+                onclick="showProduct(
+                    'Nike Shoes',
+                    '$120',
+                    'Red, Blue, Black',
+                    'Comfortable running shoes for daily use.',
+                    '20% OFF',
+                    'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
+                    'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
+                    'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77',
+                    'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519'
+                )">
+
+                View Details
+
+            </button>
+
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1"
+                alt="Hoodie">
+
+            <h3>Blue Hoodie</h3>
+
+            <p>$80</p>
+
+            <span class="offer">
+                15% OFF
+            </span>
+
+            <p class="product-text">
+                Premium hoodie for winter wear.
+            </p>
+
+            <button
+                onclick="addToCart(
+                    'Blue Hoodie',
+                    '$80'
+                )">
+
+                Add To Cart
+
+            </button>
+
+            <button
+                onclick="showProduct(
+                    'Blue Hoodie',
+                    '$80',
+                    'Blue, Black, Green',
+                    'Warm premium hoodie.',
+                    '15% OFF',
+                    'https://images.unsplash.com/photo-1503341504253-dff4815485f1',
+                    'https://images.unsplash.com/photo-1503341504253-dff4815485f1',
+                    'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab',
+                    'https://images.unsplash.com/photo-1576566588028-4147f3842f27'
+                )">
+
+                View Details
+
+            </button>
+
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                alt="Watch">
+
+            <h3>Luxury Watch</h3>
+
+            <p>$250</p>
+
+            <span class="offer">
+                30% OFF
+            </span>
+
+            <p class="product-text">
+                Stylish luxury smart watch.
+            </p>
+
+            <button
+                onclick="addToCart(
+                    'Luxury Watch',
+                    '$250'
+                )">
+
+                Add To Cart
+
+            </button>
+
+            <button
+                onclick="showProduct(
+                    'Luxury Watch',
+                    '$250',
+                    'Black, Silver, Gold',
+                    'Premium smart luxury watch.',
+                    '30% OFF',
+                    'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
+                    'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
+                    'https://images.unsplash.com/photo-1547996160-81dfa63595aa',
+                    'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56'
+                )">
+
+                View Details
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Cart Section -->
+
+    <section class="cart-section">
+
+        <h2>
+            🛒 Selected Products
+        </h2>
+
+        <div id="cart-items">
+
+            <p>
+                No products selected.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            ShopEase is an online shopping
+            platform offering trendy products
+            with best quality and price.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Email : shopease@gmail.com
+        </p>
+
+        <p>
+            © 2026 ShopEase |
+            All Rights Reserved
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<!-- Product Popup -->
+
+<div
+    class="product-popup"
+    id="product-popup">
+
+    <div class="popup-content">
+
+        <!-- Close Button -->
+
+        <span
+            class="close-btn"
+            onclick="closePopup()">
+
+            ✖
+
+        </span>
+
+        <!-- Main Image -->
+
+        <img
+            id="popup-img"
+            src=""
+            alt="Product">
+
+        <!-- Small Images -->
+
+        <div class="multi-images">
+
+            <img
+                id="img1"
+                src=""
+                alt="Front"
+                onclick="changeImage(this.src)">
+
+            <img
+                id="img2"
+                src=""
+                alt="Side"
+                onclick="changeImage(this.src)">
+
+            <img
+                id="img3"
+                src=""
+                alt="Back"
+                onclick="changeImage(this.src)">
+
+        </div>
+
+        <!-- Product Details -->
+
+        <h2 id="popup-title"></h2>
+
+        <p id="popup-price"></p>
+
+        <p id="popup-offer"></p>
+
+        <p id="popup-description"></p>
+
+        <!-- Color Selection -->
+
+        <h3>Select Color</h3>
+
+        <div class="color-options">
+
+            <button
+                class="red"
+                onclick="selectColor('Red')">
+
+                Red
+
+            </button>
+
+            <button
+                class="blue"
+                onclick="selectColor('Blue')">
+
+                Blue
+
+            </button>
+
+            <button
+                class="black"
+                onclick="selectColor('Black')">
+
+                Black
+
+            </button>
+
+            <button
+                class="green"
+                onclick="selectColor('Green')">
+
+                Green
+
+            </button>
+
+        </div>
+
+        <p id="selected-color">
+
+            Selected Color : None
+
+        </p>
+
+        <!-- Size Selection -->
+
+        <h3>Select Size</h3>
+
+        <div class="size-options">
+
+            <button
+                onclick="selectSize('S')">
+
+                S
+
+            </button>
+
+            <button
+                onclick="selectSize('M')">
+
+                M
+
+            </button>
+
+            <button
+                onclick="selectSize('L')">
+
+                L
+
+            </button>
+
+            <button
+                onclick="selectSize('XL')">
+
+                XL
+
+            </button>
+
+        </div>
+
+        <p id="selected-size">
+
+            Selected Size : None
+
+        </p>
+
+        <!-- Add To Cart -->
+
+        <button
+            class="add-cart-btn"
+            onclick="popupAddToCart()">
+
+            Add To Cart
+
+        </button>
+
+    </div>
+
+</div>
